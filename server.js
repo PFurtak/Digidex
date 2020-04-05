@@ -6,6 +6,8 @@ const app = express();
 //connect database
 connectDB();
 
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('Welcome to Express!'));
 
 app.use('/api/users', require('./routes/users'));
