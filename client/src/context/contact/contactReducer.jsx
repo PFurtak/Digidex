@@ -15,6 +15,7 @@ export default (state, action) => {
       return {
         ...state,
         contacts: [...state.contacts, action.payload],
+        loading: false,
       };
     case UPDATE_CONTACT:
       return {
